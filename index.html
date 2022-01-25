@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng Trò chơi xe tăng</title>
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, height=devie-height, initial-scale=0.8">
+</head>
+<body>
+<p id="titleArea">Ứng dụng<br>Trò chơi xe tăng</p>
+<div id="group">
+    <img id="tank" src="asset/tank.png" alt="tankImage">
+    <table id="tableArea"></table>
+</div>
+</body>
+</html>
+
+<script>
+    let tableArea = document.getElementById('tableArea');
+
+    for (let i = 0; i < 10; i++) {
+        let tableRow = document.createElement('tr');
+        tableArea.appendChild(tableRow);
+
+        for (let i = 0; i < 10; i++) {
+            let tableCell = document.createElement('td');
+            tableRow.appendChild(tableCell)
+        }
+    }
+
+    let tank = document.getElementById('tank');
+    let distance = tank.offsetWidth + 1;
+    let minTop = 2;
+    let minLeft = 2;
+    let maxTop = minTop + (distance * 9);
+    let maxLeft = minLeft + (distance * 9);
+    tank.style.top = minTop + 'px';
+    tank.style.left = minLeft + 'px';
+
+    let bomb = document.createElement('img');
+    bomb.src = 'asset/bomb.png';
+    bomb.id = 'bomb';
+
+    let bombArea = document.createElement('div');
+    bombArea.id = 'bombArea';
+    bombArea.appendChild(bomb);
+    document.getElementById('group').appendChild(bombArea);
+
+    let a = tank.offsetWidth + tableArea.offsetWidth
+    let randomTop = Math.floor(Math.random() * 10);
+    let randomLeft = Math.floor(Math.random() * 10);
+    bombArea.style.top = (minTop + distance * randomTop) - a + 'px';
+    bombArea.style.left = (minLeft + distance * randomLeft) + 'px';
+
+    let explosion = document.createElement('img');
+    explosion.src = 'asset/explosion.png';
+    explosion.id = 'explosion';
+    document.getElementById('group').appendChild(explosion);
+    explosion.style.top = parseInt(bombArea.style.top) + -41 + 3 + 'px';
+    explosion.style.left = parseInt(bombArea.style.left) + 'px';
+    explosion.style.visibility = 'hidden';
+
+    function moveUp() {
+        tank.style.top = parseInt(tank.style.top) === minTop
+            ? tank.style.top
+            : parseInt(tank.style.top) - distance + 'px';
+        explode();
+    }
+
+    function moveDown() {
+        tank.style.top = parseInt(tank.style.top, 10) === maxTop
+            ? tank.style.top
+            : parseInt(tank.style.top) + distance + 'px';
+        explode();
+    }
+
+    function moveRight() {
+        tank.style.left = parseInt(tank.style.left) === maxLeft
+            ? tank.style.left
+            : parseInt(tank.style.left) + distance + 'px';
+        explode();
+    }
+
+    function moveLeft() {
+        tank.style.left = parseInt(tank.style.left) === minLeft
+            ? tank.style.left
+            : parseInt(tank.style.left) - distance + 'px';
+        explode();
+    }
+
+    function explode() {
+        if (parseInt(tank.style.top, 10) === (parseInt(bombArea.style.top, 10) + a)
+            && parseInt(tank.style.left, 10) === parseInt(bombArea.style.left, 10)) {
+            console.log('Explode');
+            tank.style.visibility = 'hidden';
+            bombArea.style.visibility = 'hidden';
+            explosion.style.visibility = 'visible';
+        }
+    }
+
+    window.onkeydown = function (event) {
+        switch (event.key) {
+            case 'ArrowUp':
+                moveUp();
+                break;
+            case 'ArrowDown':
+                moveDown();
+                break;
+            case 'ArrowLeft':
+                moveLeft();
+                break;
+            case 'ArrowRight':
+                moveRight();
+                break;
+        }
+    }
+</script>

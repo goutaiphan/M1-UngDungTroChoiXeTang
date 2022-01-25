@@ -1,0 +1,64 @@
+body {
+    margin: 100px 50px 150px 50px;
+    background-image: url('asset/Triangle Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#titleArea {
+    margin: 0 0 70px 0;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 33px;
+    transform: scale(1.05, 1);
+    line-height: 140%;
+}
+
+#group {
+    display: grid;
+    justify-content: center;
+}
+
+#tank {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 3px;
+}
+
+#bombArea {
+    width: 38px;
+    height: 38px;
+    position: relative;
+}
+
+#bomb {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
+
+#explosion {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 3px;
+}
+
+#tableArea {
+    position: relative;
+    top: -40px;
+    border-collapse: collapse;
+    border: 2px solid darkgray;
+    border-radius: 3px;
+}
+
+td {
+    width: 38px;
+    height: 38px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
