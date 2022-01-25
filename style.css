@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('/asset/PlayfairDisplay-Regular.ttf');
+}
+
 body {
     margin: 100px 50px 150px 50px;
-    background-image: url('asset/Triangle Background.png');
+    background-image: url('asset/TriangleBackground.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,7 +14,7 @@ body {
 #titleArea {
     margin: 0 0 70px 0;
     text-align: center;
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-size: 33px;
     transform: scale(1.05, 1);
     line-height: 140%;
