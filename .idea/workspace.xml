@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbcabf14-34cc-4fe4-8a9e-49d1ab767812" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/M1-XeTangVeThanh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +38,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -90,7 +94,8 @@
       <workItem from="1643275162901" duration="1640000" />
       <workItem from="1643277007782" duration="403000" />
       <workItem from="1643277454036" duration="15000" />
-      <workItem from="1643278782857" duration="611000" />
+      <workItem from="1643278782857" duration="697000" />
+      <workItem from="1643279486227" duration="4000" />
     </task>
     <servers />
   </component>
