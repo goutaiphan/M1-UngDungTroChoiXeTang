@@ -126,22 +126,17 @@
             playArea.removeChild(castleArea);
             playArea.append(fireworkArea);
 
-            let audio = document.createElement('audio');
-            audio.src = 'asset/PureSummer.mp3';
-            document.body.append(audio);
-            //audio.play();
-
-            let victorySound = document.createElement('audio');
-            victorySound.src = 'asset/VictorySound.mp3';
-            document.body.append(victorySound);
-            victorySound.play();
-
             fireworkArea.style.opacity = '0';
             let opacity = 0;
             setInterval(function () {
                 opacity += 0.1;
                 fireworkArea.style.opacity = opacity;
             }, 120);
+
+            let victorySound = document.createElement('audio');
+            victorySound.src = 'asset/VictorySound.mp3';
+            document.body.append(victorySound);
+            victorySound.play();
         }
     }
 
