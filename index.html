@@ -17,6 +17,16 @@
 <script>
     let playArea = document.getElementById('playArea');
 
+    let explosionSound = document.createElement('audio');
+    explosionSound.src = 'asset/ExplosionSound.mp3';
+    explosionSound.preload;
+    document.body.append(explosionSound);
+
+    let victorySound = document.createElement('audio');
+    victorySound.src = 'asset/VictorySound.mp3';
+    victorySound.preload;
+    document.body.append(victorySound);
+
     let table = document.createElement('table');
     playArea.append(table);
     let dimension = 5;
@@ -98,11 +108,7 @@
                 playArea.removeChild(tankArea);
                 playArea.append(explosionArea);
 
-                let explosionSound = document.createElement('audio');
-                explosionSound.src = 'asset/ExplosionSound.mp3';
-                document.body.append(explosionSound);
                 explosionSound.play();
-
                 explosionArea.style.opacity = '0';
                 let opacity = 0;
                 setInterval(function () {
@@ -126,17 +132,13 @@
             playArea.removeChild(castleArea);
             playArea.append(fireworkArea);
 
+            victorySound.play();
             fireworkArea.style.opacity = '0';
             let opacity = 0;
             setInterval(function () {
                 opacity += 0.1;
                 fireworkArea.style.opacity = opacity;
             }, 120);
-
-            let victorySound = document.createElement('audio');
-            victorySound.src = 'asset/VictorySound.mp3';
-            document.body.append(victorySound);
-            victorySound.play();
         }
     }
 
