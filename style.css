@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Playfair Display';
+    font-family: 'PlayfairDisplay';
     src: url('asset/PlayfairDisplay.ttf');
 }
 
@@ -14,7 +14,7 @@ body {
 
 #titleArea {
     margin: 70px auto;
-    font-family: 'Playfair Display', serif;
+    font-family: 'PlayfairDisplay', serif;
     font-size: 35px;
     transform: scale(1.05, 1);
 }
@@ -101,9 +101,9 @@ table {
     width: fit-content;
     position: relative;
     table-layout: fixed;
-    border-collapse: collapse;
     border: 2px solid darkgray;
     border-radius: 3px;
+    border-collapse: collapse;
 }
 
 td {
