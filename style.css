@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Playfair Display';
-    src: url('/asset/PlayfairDisplay-Regular.ttf');
+    src: url('asset/PlayfairDisplay.ttf');
 }
 
 body {
@@ -117,6 +117,7 @@ td {
     width: fit-content;
     margin: auto;
     position: relative;
+    left: -20px;
 }
 
 .arrow {
@@ -125,37 +126,32 @@ td {
     height: 45px;
 }
 
-#ArrowUp {
-    left: -25px;
-}
-
-#ArrowDown {
+#arrowdown {
     top: 100px;
-    left: -25px;
 }
 
-#ArrowLeft {
+#arrowleft {
     top: 48px;
-    right: 40px;
+    left: -60px;
 }
 
-#ArrowRight {
+#arrowright {
     top: 48px;
-    left: 35px;
+    left: 60px;
 }
 
-#ArrowUp:active {
+#arrowup:active {
     transform: translateY(-4px);
 }
 
-#ArrowDown:active {
+#arrowdown:active {
     transform: translateY(4px);
 }
 
-#ArrowLeft:active {
+#arrowleft:active {
     transform: translateX(-4px);
 }
 
-#ArrowRight:active {
+#arrowright:active {
     transform: translateX(4px);
 }
