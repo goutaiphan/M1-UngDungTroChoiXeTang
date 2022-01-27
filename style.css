@@ -21,7 +21,7 @@ body {
 
 #playArea {
     width: fit-content;
-    margin: auto;
+    margin: auto auto 50px auto;
     position: relative;
 }
 
@@ -37,7 +37,7 @@ body {
     height: 51px;
     position: absolute;
     left: 6px;
-    top: 7px;
+    top: 8px;
 }
 
 #castleArea {
@@ -111,4 +111,51 @@ td {
     height: 58px;
     border: 1px solid lightgray;
     border-radius: 3px;
+}
+
+#controlArea {
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+#ArrowUp {
+    left: -25px;
+}
+
+#ArrowDown {
+    top: 100px;
+    left: -25px;
+}
+
+#ArrowLeft {
+    top: 48px;
+    right: 40px;
+}
+
+#ArrowRight {
+    top: 48px;
+    left: 40px;
+}
+
+#ArrowUp:active {
+    transform: translateY(-4px);
+}
+
+#ArrowDown:active {
+    transform: translateY(4px);
+}
+
+#ArrowLeft:active {
+    transform: translateX(-4px);
+}
+
+#ArrowRight:active {
+    transform: translateX(4px);
 }
