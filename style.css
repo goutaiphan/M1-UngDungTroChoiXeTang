@@ -16,31 +16,31 @@
 }
 
 #tank {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     transition: all 0.5s ease-out;
     background-image: url('asset/Tank.png');
-    background-size: 50px 52px;
-    background-position: 5px 6px;
+    background-size: 60px 62px;
+    background-position: 6px 7px;
     background-repeat: no-repeat;
 }
 
 #castle {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     background-image: url('asset/Castle.png');
-    background-size: 53px;
-    background-position: 5px 5px;
+    background-size: 63px;
+    background-position: 5px 4px;
     background-repeat: no-repeat;
 }
 
 #bomb {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-image: url('asset/Bomb.png');
-    background-size: 40px;
+    background-size: 50px;
     background-position: 9px 11px;
     background-repeat: no-repeat;
     position: absolute;
@@ -48,11 +48,11 @@
 }
 
 #explosion {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     background-image: url('asset/Explosion.png');
-    background-size: 51px;
+    background-size: 61px;
     background-position: 5px 6px;
     background-repeat: no-repeat;
 
@@ -62,11 +62,11 @@
 }
 
 #firework {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     position: absolute;
     background-image: url('asset/Firework.png');
-    background-size: 48px;
+    background-size: 58px;
     background-position: 7px 7px;
     background-repeat: no-repeat;
 
@@ -85,8 +85,8 @@ table {
 }
 
 td {
-    width: 58px;
-    height: 58px;
+    width: 68px;
+    height: 68px;
     border: 1px solid lightgray;
     border-radius: 3px;
 }
