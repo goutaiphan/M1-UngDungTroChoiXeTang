@@ -8,8 +8,9 @@
     src: url('asset/TimesNewRoman.ttf');
 }
 
-*::selection {
-    background-color: transparent;
+.press, img, .press:focus, img:focus {
+    outline: 0;
+    border: 0 none;
 }
 
 body {
