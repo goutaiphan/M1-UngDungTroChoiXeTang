@@ -84,9 +84,8 @@
     let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
     let controlArea = document.getElementById('controlArea');
     for (let i = 0; i < arrowName.length; i++) {
-        let arrow = document.createElement('img');
+        let arrow = document.createElement('button');
         arrow.className = arrowName[i].toLowerCase();
-        arrow.src = 'asset/Arrow.png';
         if (playArea.contains(tankArea)) {
             arrow.onclick = function () {
                 moveTank(arrowName[i]);

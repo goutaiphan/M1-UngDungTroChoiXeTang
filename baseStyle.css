@@ -27,6 +27,6 @@ body {
 }
 
 img {
-    border: none;
+    pointer-events: none;
     outline: none;
 }

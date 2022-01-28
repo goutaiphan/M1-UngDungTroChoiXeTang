@@ -117,6 +117,9 @@ td {
     height: 45px;
     position: absolute;
     cursor: pointer;
+    border: none;
+    background: url('asset/Arrow.png');
+    background-size: cover;
 }
 
 .arrowdown {
