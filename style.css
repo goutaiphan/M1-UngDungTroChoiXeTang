@@ -1,5 +1,4 @@
 #titleArea {
-    margin: 70px auto;
     font-family: 'PlayfairDisplay', serif;
     font-size: 35px;
     transform: scale(1.05, 1);
@@ -7,7 +6,7 @@
 
 #playArea {
     width: fit-content;
-    margin: 65px auto;
+    margin: 70px auto 65px;
     position: relative;
 }
 

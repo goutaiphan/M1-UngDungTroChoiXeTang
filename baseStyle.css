@@ -9,7 +9,7 @@
 }
 
 body {
-    margin: 100px 50px 150px 50px;
+    margin: 100px auto 300px;
     text-align: center;
     background-image: url('asset/TriangleBackground.png');
     background-size: cover;
