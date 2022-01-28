@@ -69,13 +69,17 @@
     let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
     let controlArea = document.getElementById('controlArea');
     for (let i = 0; i < arrowName.length; i++) {
-        let arrow = document.createElement('div');
+        let arrow = document.createElement('img');
         arrow.className = arrowName[i].toLowerCase();
         arrow.onclick = function () {
             moveTank(arrowName[i]);
         };
         controlArea.appendChild(arrow);
     }
+
+    let circle = document.createElement('img');
+    circle.id = 'circle';
+    controlArea.appendChild(circle);
 
     let explosionSound = document.getElementById('explosionSound');
     explosionSound.playbackRate = 1.1;

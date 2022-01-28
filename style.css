@@ -98,14 +98,20 @@ td {
     left: -20px;
 }
 
+#circle {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin: 37px 0 0 -13px;
+    content: url('asset/Circle.png');
+}
+
 .arrowup, .arrowdown, .arrowleft, .arrowright {
     width: 45px;
     height: 45px;
     position: absolute;
     cursor: pointer;
-    background-image: url('asset/Arrow.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    content: url('asset/Arrow.png');
     -webkit-tap-highlight-color: transparent;
 }
 
