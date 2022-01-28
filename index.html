@@ -47,33 +47,23 @@
     playArea.appendChild(tank);
 
     let castlePosition = [dimension - 1, dimension - 1];
-    let castle = document.createElement('img');
+    let castle = document.createElement('div');
     castle.id = 'castle';
-    castle.src = 'asset/castle.png';
-
-    let castleArea = document.createElement('div');
-    castleArea.id = 'castle';
-    castleArea.style.top = getLocation(castlePosition[0]);
-    castleArea.style.left = getLocation(castlePosition[1]);
-    castleArea.appendChild(castle);
-    playArea.appendChild(castleArea);
+    castle.style.top = getLocation(castlePosition[0]);
+    castle.style.left = getLocation(castlePosition[1]);
+    playArea.appendChild(castle);
 
     let bombArray = [];
     let bombPosition = [[0, 1], [1, 3], [3, 2], [4, 0], [3, 4]];
     let bombAmount = bombPosition.length;
 
     for (let i = 0; i < bombAmount; i++) {
-        let bomb = document.createElement('img');
+        let bomb = document.createElement('div');
         bomb.id = 'bomb';
-        bomb.src = 'asset/bomb.png';
-
-        let bombArea = document.createElement('div');
-        bombArea.id = 'bombArea';
-        bombArea.style.left = getLocation(bombPosition[i][0]);
-        bombArea.style.top = getLocation(bombPosition[i][1]);
-        bombArea.appendChild(bomb);
-        playArea.appendChild(bombArea);
-        bombArray.push(bombArea);
+        bomb.style.left = getLocation(bombPosition[i][0]);
+        bomb.style.top = getLocation(bombPosition[i][1]);
+        playArea.appendChild(bomb);
+        bombArray.push(bomb);
     }
 
     let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
@@ -103,66 +93,53 @@
     }
 
     function result() {
-        if (playArea.contains(tank)) {
-            for (let i = 0; i < bombAmount; i++) {
-                if (String(tankPosition) === String(bombPosition[i])) {
-                    let explosion = document.createElement('img');
-                    explosion.id = 'explosion';
-                    explosion.src = 'asset/explosion.png';
-
-                    let explosionArea = document.createElement('div');
-                    explosionArea.id = 'explosionArea';
-                    explosionArea.style.left = getLocation(tankPosition[0]);
-                    explosionArea.style.top = getLocation(tankPosition[1]);
-                    explosionArea.appendChild(explosion);
-                    playArea.removeChild(tank);
-                    playArea.appendChild(explosionArea);
-
-                    explosionSound.play();
-                }
-            }
-
-            if (String(tankPosition) === String(castlePosition)) {
-                let firework = document.createElement('img');
-                firework.id = 'firework';
-                firework.src = 'asset/firework.png';
-
-                let fireworkArea = document.createElement('div');
-                fireworkArea.id = 'fireworkArea';
-                fireworkArea.style.left = getLocation(tankPosition[0]);
-                fireworkArea.style.top = getLocation(tankPosition[1]);
-                fireworkArea.appendChild(firework);
+        for (let i = 0; i < bombAmount; i++) {
+            if (String(tankPosition) === String(bombPosition[i])) {
+                let explosion = document.createElement('div');
+                explosion.id = 'explosion';
+                explosion.style.left = getLocation(tankPosition[0]);
+                explosion.style.top = getLocation(tankPosition[1]);
                 playArea.removeChild(tank);
-                playArea.removeChild(castleArea);
-                playArea.appendChild(fireworkArea);
-
-                victorySound.play();
+                playArea.appendChild(explosion);
+                explosionSound.play();
             }
+        }
+
+        if (String(tankPosition) === String(castlePosition)) {
+            let firework = document.createElement('div');
+            firework.id = 'firework';
+            firework.style.left = getLocation(tankPosition[0]);
+            firework.style.top = getLocation(tankPosition[1]);
+            playArea.removeChild(tank);
+            playArea.removeChild(castle);
+            playArea.appendChild(firework);
+            victorySound.play();
         }
     }
 
     function moveTank(key) {
-        let boundary, distance;
+        if (playArea.contains(tank)) {
+            let boundary, distance;
+            if (key === 'ArrowUp' || key === 'ArrowLeft') {
+                boundary = minLocation;
+                distance = -baseDistance;
+            } else {
+                boundary = maxLocation;
+                distance = baseDistance;
+            }
 
-        if (key === 'ArrowUp' || key === 'ArrowLeft') {
-            boundary = minLocation;
-            distance = -baseDistance;
-        } else {
-            boundary = maxLocation;
-            distance = baseDistance;
+            if (key === 'ArrowUp' || key === 'ArrowDown') {
+                tank.style.top = tank.style.top === boundary
+                    ? tank.style.top
+                    : parseInt(tank.style.top) + distance + 'px';
+            } else {
+                tank.style.left = tank.style.left === boundary
+                    ? tank.style.left
+                    : parseInt(tank.style.left) + distance + 'px';
+            }
+            tankPosition = [getPosition(tank.style.left), getPosition(tank.style.top)];
+            result();
         }
-
-        if (key === 'ArrowUp' || key === 'ArrowDown') {
-            tank.style.top = tank.style.top === boundary
-                ? tank.style.top
-                : parseInt(tank.style.top) + distance + 'px';
-        } else {
-            tank.style.left = tank.style.left === boundary
-                ? tank.style.left
-                : parseInt(tank.style.left) + distance + 'px';
-        }
-        tankPosition = [getPosition(tank.style.left), getPosition(tank.style.top)];
-        result();
     }
 
     function moveControl(key) {
