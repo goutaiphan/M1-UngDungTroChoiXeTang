@@ -25,3 +25,8 @@ body {
         opacity: 1;
     }
 }
+
+img {
+    border: none;
+    outline: none;
+}

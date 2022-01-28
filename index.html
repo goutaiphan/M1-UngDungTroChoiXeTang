@@ -87,9 +87,11 @@
         let arrow = document.createElement('img');
         arrow.className = arrowName[i].toLowerCase();
         arrow.src = 'asset/Arrow.png';
-        arrow.onclick = function () {
-            moveTank(arrowName[i]);
-        };
+        if (playArea.contains(tankArea)) {
+            arrow.onclick = function () {
+                moveTank(arrowName[i]);
+            };
+        }
         controlArea.appendChild(arrow);
     }
 
