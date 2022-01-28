@@ -77,23 +77,20 @@ table {
     border: 2px solid darkgray;
     border-radius: 3px;
     border-spacing: 0;
-    border-collapse: separate;
 }
 
 td {
     width: 63px;
     height: 63px;
-    border: 1px solid darkgray;
-    border-top: none;
-    border-left: none;
+    border: none;
 }
 
-tr:last-child td{
-    border-bottom: none;
+td:not(td:last-child) {
+    border-right: 1px solid lightgray;
 }
 
-tr:nth-child(n) td:last-child{
-    border-right: none;
+td:not(tr:last-child td){
+    border-bottom: 1px solid lightgray;
 }
 
 #controlArea {
