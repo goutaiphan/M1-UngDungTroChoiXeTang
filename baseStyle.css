@@ -8,9 +8,10 @@
     src: url('asset/TimesNewRoman.ttf');
 }
 
-.press, img, .press:focus, img:focus {
-    outline: 0;
-    border: 0 none;
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 body {
