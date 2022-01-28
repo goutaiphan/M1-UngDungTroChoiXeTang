@@ -84,7 +84,7 @@ table {
 td {
     width: 63px;
     height: 63px;
-    border: 1px solid lightgray;
+    border: 1px solid darkgray;
     border-top: none;
     border-left: none;
 }
