@@ -40,16 +40,11 @@
     }
 
     let tankPosition = [0, 0];
-    let tank = document.createElement('img');
+    let tank = document.createElement('div');
     tank.id = 'tank';
-    tank.src = 'asset/tank.png';
-
-    let tankArea = document.createElement('div');
-    tankArea.id = 'tankArea';
-    tankArea.style.top = getLocation(tankPosition[0]);
-    tankArea.style.left = getLocation(tankPosition[1]);
-    tankArea.appendChild(tank);
-    playArea.appendChild(tankArea);
+    tank.style.top = getLocation(tankPosition[0]);
+    tank.style.left = getLocation(tankPosition[1]);
+    playArea.appendChild(tank);
 
     let castlePosition = [dimension - 1, dimension - 1];
     let castle = document.createElement('img');
@@ -57,7 +52,7 @@
     castle.src = 'asset/castle.png';
 
     let castleArea = document.createElement('div');
-    castleArea.id = 'tankArea';
+    castleArea.id = 'castle';
     castleArea.style.top = getLocation(castlePosition[0]);
     castleArea.style.left = getLocation(castlePosition[1]);
     castleArea.appendChild(castle);
@@ -84,13 +79,11 @@
     let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
     let controlArea = document.getElementById('controlArea');
     for (let i = 0; i < arrowName.length; i++) {
-        let arrow = document.createElement('img');
+        let arrow = document.createElement('div');
         arrow.className = arrowName[i].toLowerCase();
-        if (playArea.contains(tankArea)) {
-            arrow.onclick = function () {
-                moveTank(arrowName[i]);
-            };
-        }
+        arrow.onclick = function () {
+            moveTank(arrowName[i]);
+        };
         controlArea.appendChild(arrow);
     }
 
@@ -101,7 +94,7 @@
     victorySound.volume = 0.5;
 
     window.onkeydown = function (event) {
-        if (arrowName.includes(event.key) && playArea.contains(tankArea)) {
+        if (arrowName.includes(event.key)) {
             moveTank(event.key);
             moveControl(event.key);
         } else {
@@ -110,39 +103,41 @@
     }
 
     function result() {
-        for (let i = 0; i < bombAmount; i++) {
-            if (String(tankPosition) === String(bombPosition[i])) {
-                let explosion = document.createElement('img');
-                explosion.id = 'explosion';
-                explosion.src = 'asset/explosion.png';
+        if (playArea.contains(tank)) {
+            for (let i = 0; i < bombAmount; i++) {
+                if (String(tankPosition) === String(bombPosition[i])) {
+                    let explosion = document.createElement('img');
+                    explosion.id = 'explosion';
+                    explosion.src = 'asset/explosion.png';
 
-                let explosionArea = document.createElement('div');
-                explosionArea.id = 'explosionArea';
-                explosionArea.style.left = getLocation(tankPosition[0]);
-                explosionArea.style.top = getLocation(tankPosition[1]);
-                explosionArea.appendChild(explosion);
-                playArea.removeChild(tankArea);
-                playArea.appendChild(explosionArea);
+                    let explosionArea = document.createElement('div');
+                    explosionArea.id = 'explosionArea';
+                    explosionArea.style.left = getLocation(tankPosition[0]);
+                    explosionArea.style.top = getLocation(tankPosition[1]);
+                    explosionArea.appendChild(explosion);
+                    playArea.removeChild(tank);
+                    playArea.appendChild(explosionArea);
 
-                explosionSound.play();
+                    explosionSound.play();
+                }
             }
-        }
 
-        if (String(tankPosition) === String(castlePosition)) {
-            let firework = document.createElement('img');
-            firework.id = 'firework';
-            firework.src = 'asset/firework.png';
+            if (String(tankPosition) === String(castlePosition)) {
+                let firework = document.createElement('img');
+                firework.id = 'firework';
+                firework.src = 'asset/firework.png';
 
-            let fireworkArea = document.createElement('div');
-            fireworkArea.id = 'fireworkArea';
-            fireworkArea.style.left = getLocation(tankPosition[0]);
-            fireworkArea.style.top = getLocation(tankPosition[1]);
-            fireworkArea.appendChild(firework);
-            playArea.removeChild(tankArea);
-            playArea.removeChild(castleArea);
-            playArea.appendChild(fireworkArea);
+                let fireworkArea = document.createElement('div');
+                fireworkArea.id = 'fireworkArea';
+                fireworkArea.style.left = getLocation(tankPosition[0]);
+                fireworkArea.style.top = getLocation(tankPosition[1]);
+                fireworkArea.appendChild(firework);
+                playArea.removeChild(tank);
+                playArea.removeChild(castleArea);
+                playArea.appendChild(fireworkArea);
 
-            victorySound.play();
+                victorySound.play();
+            }
         }
     }
 
@@ -158,21 +153,21 @@
         }
 
         if (key === 'ArrowUp' || key === 'ArrowDown') {
-            tankArea.style.top = tankArea.style.top === boundary
-                ? tankArea.style.top
-                : parseInt(tankArea.style.top) + distance + 'px';
+            tank.style.top = tank.style.top === boundary
+                ? tank.style.top
+                : parseInt(tank.style.top) + distance + 'px';
         } else {
-            tankArea.style.left = tankArea.style.left === boundary
-                ? tankArea.style.left
-                : parseInt(tankArea.style.left) + distance + 'px';
+            tank.style.left = tank.style.left === boundary
+                ? tank.style.left
+                : parseInt(tank.style.left) + distance + 'px';
         }
-        tankPosition = [getPosition(tankArea.style.left), getPosition(tankArea.style.top)];
+        tankPosition = [getPosition(tank.style.left), getPosition(tank.style.top)];
         result();
     }
 
-    function moveControl(key){
+    function moveControl(key) {
         document.getElementsByClassName(key.toLowerCase())[0].classList.add('active');
-        setTimeout(function() {
+        setTimeout(function () {
             document.getElementsByClassName(key.toLowerCase())[0].classList.remove('active');
         }, 100);
     }

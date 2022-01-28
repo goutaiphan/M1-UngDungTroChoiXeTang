@@ -12,18 +12,18 @@
 }
 
 #tankArea {
+
+}
+
+#tank {
     width: 60px;
     height: 60px;
     position: absolute;
     transition: all 0.5s ease-out;
-}
-
-#tank {
-    width: 50px;
-    height: 51px;
-    position: absolute;
-    left: 6px;
-    top: 8px;
+    background-image: url('asset/tank.png');
+    background-size: 50px 51px;
+    background-repeat: no-repeat;
+    background-position: 6px 6px;
 }
 
 #castleArea {
@@ -106,7 +106,7 @@ td {
 }
 
 #controlArea {
-    width: 200px;
+    width: fit-content;
     margin: auto;
     position: relative;
     left: -20px;
@@ -117,12 +117,9 @@ td {
     height: 45px;
     position: absolute;
     cursor: pointer;
-    border: none;
     background-image: url('asset/Arrow.png');
     background-size: cover;
-    color: transparent;
-    background-color: transparent;
-    -webkit-tap-highlight-color: transparent;
+ 
 }
 
 .arrowdown {
