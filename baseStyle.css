@@ -8,6 +8,10 @@
     src: url('asset/TimesNewRoman.ttf');
 }
 
+*::selection {
+    background-color: transparent;
+}
+
 body {
     margin: 100px 50px 150px 50px;
     text-align: center;
@@ -24,9 +28,4 @@ body {
     100% {
         opacity: 1;
     }
-}
-
-img {
-    pointer-events: none;
-    outline: none;
 }
