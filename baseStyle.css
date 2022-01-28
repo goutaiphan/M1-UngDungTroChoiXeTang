@@ -8,12 +8,6 @@
     src: url('asset/TimesNewRoman.ttf');
 }
 
-img {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-}
-
 body {
     margin: 100px 50px 150px 50px;
     text-align: center;

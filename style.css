@@ -118,6 +118,10 @@ td {
     position: absolute;
     cursor: pointer;
     border: none;
+    background-image: url('asset/Arrow.png');
+    background-size: cover;
+    color: transparent;
+    background-color: transparent;
 }
 
 .arrowdown {
