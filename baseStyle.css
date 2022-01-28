@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('asset/PlayfairDisplay.ttf');
+}
+
+@font-face {
+    font-family: 'TimesNewRoman';
+    src: url('asset/TimesNewRoman.ttf');
+}
+
+body {
+    margin: 100px 50px 150px 50px;
+    text-align: center;
+    background-image: url('asset/TriangleBackground.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

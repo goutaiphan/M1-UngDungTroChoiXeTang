@@ -2,48 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <title>Xe tăng về thành</title>
     <link href="style.css" rel="stylesheet">
+    <link href="baseStyle.css" rel="stylesheet">
     <link href="#" rel="icon"/>
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.8">
 </head>
 <body>
 <div id="titleArea">Xe tăng về thành</div>
 <div id="playArea"></div>
 <div id="controlArea"></div>
+<div id="audioArea">
+    <audio id="explosionSound" src="asset/ExplosionSound.mp3" preload="auto"></audio>
+    <audio id="victorySound" src="asset/VictorySound.mp3" preload="auto"></audio>
+</div>
 </body>
 </html>
 
 <script>
     let playArea = document.getElementById('playArea');
 
-    let explosionSound = document.createElement('audio');
-    explosionSound.src = 'asset/ExplosionSound.mp3';
-    explosionSound.preload;
-    explosionSound.playbackRate = 1.1;
-    document.body.appendChild(explosionSound);
-
-    let victorySound = document.createElement('audio');
-    victorySound.src = 'asset/VictorySound.mp3';
-    victorySound.preload;
-    document.body.appendChild(victorySound);
-
-    let controlArea = document.getElementById('controlArea');
-    let array = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'];
-    for (let i = 0; i < array.length; i++) {
-        let arrow = document.createElement('img');
-        arrow.className = 'arrow';
-        arrow.id = array[i].toLowerCase();
-        arrow.src = 'asset/' + array[i] + '.png';
-        arrow.onclick = function () {
-            move(array[i]);
-        };
-        controlArea.appendChild(arrow);
-    }
+    let dimension = 5,
+        baseDistance = 61,
+        minLocation = '2px',
+        maxLocation = getLocation(dimension - 1);
 
     let table = document.createElement('table');
     playArea.appendChild(table);
-    let dimension = 5;
     for (let i = 0; i < dimension; i++) {
         let tableRow = document.createElement('tr');
         table.appendChild(tableRow);
@@ -54,14 +39,10 @@
         }
     }
 
-    let distance = 61;
-    let minLocation = '2px';
-    let maxLocation = getLocation(dimension - 1);
-
     let tankPosition = [0, 0];
     let tank = document.createElement('img');
-    tank.src = 'asset/tank.png';
     tank.id = 'tank';
+    tank.src = 'asset/tank.png';
 
     let tankArea = document.createElement('div');
     tankArea.id = 'tankArea';
@@ -72,8 +53,8 @@
 
     let castlePosition = [dimension - 1, dimension - 1];
     let castle = document.createElement('img');
-    castle.src = 'asset/castle.png';
     castle.id = 'castle';
+    castle.src = 'asset/castle.png';
 
     let castleArea = document.createElement('div');
     castleArea.id = 'tankArea';
@@ -88,8 +69,8 @@
 
     for (let i = 0; i < bombAmount; i++) {
         let bomb = document.createElement('img');
-        bomb.src = 'asset/bomb.png';
         bomb.id = 'bomb';
+        bomb.src = 'asset/bomb.png';
 
         let bombArea = document.createElement('div');
         bombArea.id = 'bombArea';
@@ -100,18 +81,39 @@
         bombArray.push(bombArea);
     }
 
+    let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
+    let controlArea = document.getElementById('controlArea');
+    for (let i = 0; i < arrowName.length; i++) {
+        let arrow = document.createElement('img');
+        arrow.className = arrowName[i].toLowerCase();
+        arrow.src = 'asset/Arrow.png';
+        arrow.onclick = function () {
+            moveTank(arrowName[i]);
+        };
+        controlArea.appendChild(arrow);
+    }
+
+    let explosionSound = document.getElementById('explosionSound');
+    explosionSound.playbackRate = 1.1;
+    explosionSound.volume = 0.5;
+    let victorySound = document.getElementById('victorySound');
+    victorySound.volume = 0.5;
+
     window.onkeydown = function (event) {
-        array.includes(event.key)
-            ? move(event.key)
-            : event.preventDefault();
+        if (arrowName.includes(event.key) && playArea.contains(tankArea)) {
+            moveTank(event.key);
+            moveControl(event.key);
+        } else {
+            event.preventDefault();
+        }
     }
 
     function result() {
         for (let i = 0; i < bombAmount; i++) {
             if (String(tankPosition) === String(bombPosition[i])) {
                 let explosion = document.createElement('img');
-                explosion.src = 'asset/explosion.png';
                 explosion.id = 'explosion';
+                explosion.src = 'asset/explosion.png';
 
                 let explosionArea = document.createElement('div');
                 explosionArea.id = 'explosionArea';
@@ -122,19 +124,13 @@
                 playArea.appendChild(explosionArea);
 
                 explosionSound.play();
-                explosionArea.style.opacity = '0';
-                let opacity = 0;
-                setInterval(function () {
-                    opacity += 0.1;
-                    explosionArea.style.opacity = opacity;
-                }, 80);
             }
         }
 
         if (String(tankPosition) === String(castlePosition)) {
             let firework = document.createElement('img');
-            firework.src = 'asset/firework.png';
             firework.id = 'firework';
+            firework.src = 'asset/firework.png';
 
             let fireworkArea = document.createElement('div');
             fireworkArea.id = 'fireworkArea';
@@ -146,48 +142,46 @@
             playArea.appendChild(fireworkArea);
 
             victorySound.play();
-            fireworkArea.style.opacity = '0';
-            let opacity = 0;
-            setInterval(function () {
-                opacity += 0.1;
-                fireworkArea.style.opacity = opacity;
-            }, 100);
         }
     }
 
-    function move(key) {
-        if (playArea.contains(tankArea)) {
-            let limitLocation, trueDistance;
+    function moveTank(key) {
+        let boundary, distance;
 
-            if (key === 'ArrowUp' || key === 'ArrowLeft') {
-                limitLocation = minLocation;
-                trueDistance = -distance;
-            } else {
-                limitLocation = maxLocation;
-                trueDistance = distance;
-            }
-
-            if (key === 'ArrowUp' || key === 'ArrowDown') {
-                tankArea.style.top = tankArea.style.top === limitLocation
-                    ? tankArea.style.top
-                    : parseInt(tankArea.style.top) + trueDistance + 'px';
-            } else {
-                tankArea.style.left = tankArea.style.left === limitLocation
-                    ? tankArea.style.left
-                    : parseInt(tankArea.style.left) + trueDistance + 'px';
-            }
-
-            tankPosition = [getPosition(tankArea.style.left), getPosition(tankArea.style.top)];
-            result();
+        if (key === 'ArrowUp' || key === 'ArrowLeft') {
+            boundary = minLocation;
+            distance = -baseDistance;
+        } else {
+            boundary = maxLocation;
+            distance = baseDistance;
         }
+
+        if (key === 'ArrowUp' || key === 'ArrowDown') {
+            tankArea.style.top = tankArea.style.top === boundary
+                ? tankArea.style.top
+                : parseInt(tankArea.style.top) + distance + 'px';
+        } else {
+            tankArea.style.left = tankArea.style.left === boundary
+                ? tankArea.style.left
+                : parseInt(tankArea.style.left) + distance + 'px';
+        }
+        tankPosition = [getPosition(tankArea.style.left), getPosition(tankArea.style.top)];
+        result();
+    }
+
+    function moveControl(key){
+        document.getElementsByClassName(key.toLowerCase())[0].classList.add('active');
+        setTimeout(function() {
+            document.getElementsByClassName(key.toLowerCase())[0].classList.remove('active');
+        }, 100);
     }
 
     function getLocation(position) {
-        return (parseInt(minLocation) + distance * position) + 'px';
+        return (parseInt(minLocation) + baseDistance * position) + 'px';
     }
 
     function getPosition(location) {
-        return (parseInt(location) - parseInt(minLocation)) / distance;
+        return (parseInt(location) - parseInt(minLocation)) / baseDistance;
     }
 
     function randomize(min, max) {

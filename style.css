@@ -1,17 +1,3 @@
-@font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('asset/PlayfairDisplay.ttf');
-}
-
-body {
-    margin: 100px 50px 150px 50px;
-    text-align: center;
-    background-image: url('asset/TriangleBackground.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 #titleArea {
     margin: 70px auto;
     font-family: 'PlayfairDisplay', serif;
@@ -29,7 +15,7 @@ body {
     width: 60px;
     height: 60px;
     position: absolute;
-    transition: all .3s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 #tank {
@@ -58,6 +44,7 @@ body {
     width: 60px;
     height: 60px;
     position: absolute;
+    visibility: hidden;
 }
 
 #bomb {
@@ -66,13 +53,15 @@ body {
     position: absolute;
     top: 11px;
     left: 9px;
-    visibility: hidden;
 }
 
 #explosionArea {
     width: 60px;
     height: 60px;
     position: absolute;
+    opacity: 0;
+    animation: fadeIn 0.8s linear;
+    animation-fill-mode: forwards;
 }
 
 #explosion {
@@ -87,6 +76,9 @@ body {
     width: 60px;
     height: 60px;
     position: absolute;
+    opacity: 0;
+    animation: fadeIn 1.1s linear;
+    animation-fill-mode: forwards;
 }
 
 #firework {
@@ -114,44 +106,46 @@ td {
 }
 
 #controlArea {
-    width: fit-content;
+    width: 200px;
     margin: auto;
     position: relative;
     left: -20px;
 }
 
-.arrow {
-    position: absolute;
+.arrowup, .arrowdown, .arrowleft, .arrowright {
     width: 45px;
     height: 45px;
+    position: absolute;
+    cursor: pointer;
 }
 
-#arrowdown {
-    top: 100px;
+.arrowdown {
+    margin-top: 100px;
+    transform: rotate(180deg);
 }
 
-#arrowleft {
-    top: 48px;
-    left: -60px;
+.arrowleft {
+    margin: 48px 0 0 -50px;
+    transform: rotate(-90deg);
 }
 
-#arrowright {
-    top: 48px;
-    left: 60px;
+.arrowright {
+    margin: 48px 0 0 50px;
+    transform: rotate(90deg);
 }
 
-#arrowup:active {
-    transform: translateY(-4px);
+.arrowup:active, .arrowup.active {
+    transform: translate(0, -5px);
 }
 
-#arrowdown:active {
-    transform: translateY(4px);
+.arrowdown:active, .arrowdown.active {
+    transform: rotate(180deg) translate(0, -5px);
 }
 
-#arrowleft:active {
-    transform: translateX(-4px);
+.arrowleft:active, .arrowleft.active {
+    transform: rotate(-90deg) translate(0, -5px);
 }
 
-#arrowright:active {
-    transform: translateX(4px);
+.arrowright:active, .arrowright.active {
+    transform: rotate(90deg) translate(0, -5px);
 }
