@@ -95,20 +95,20 @@ td {
     width: fit-content;
     margin: auto;
     position: relative;
-    left: -20px;
+    left: -21px;
 }
 
 #circle {
-    width: 70px;
-    height: 70px;
+    width: 71px;
+    height: 71px;
     position: absolute;
-    margin: 37px 0 0 -13px;
+    margin: 38px 0 0 -12px;
     content: url('asset/Circle.png');
 }
 
 .arrowup, .arrowdown, .arrowleft, .arrowright {
-    width: 45px;
-    height: 45px;
+    width: 47px;
+    height: 47px;
     position: absolute;
     cursor: pointer;
     content: url('asset/Arrow.png');
