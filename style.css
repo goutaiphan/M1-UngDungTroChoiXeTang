@@ -74,7 +74,7 @@ table {
     width: fit-content;
     position: relative;
     table-layout: fixed;
-    border: 2px solid darkgray;
+    border: 2px solid gray;
     border-radius: 3px;
     border-spacing: 0;
 }
@@ -86,11 +86,11 @@ td {
 }
 
 td:not(td:last-child) {
-    border-right: 1px solid lightgray;
+    border-right: 1px solid darkgray;
 }
 
 td:not(tr:last-child td){
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid darkgray;
 }
 
 #controlArea {
