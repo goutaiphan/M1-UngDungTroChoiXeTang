@@ -95,20 +95,20 @@ td {
     width: fit-content;
     margin: auto;
     position: relative;
-    left: -21px;
+    left: -23px;
 }
 
 #circle {
     width: 71px;
     height: 71px;
     position: absolute;
-    margin: 38px 0 0 -12px;
+    margin: 39px 0 0 -11px;
     content: url('asset/Circle.png');
 }
 
 .arrowup, .arrowdown, .arrowleft, .arrowright {
-    width: 47px;
-    height: 47px;
+    width: 50px;
+    height: 50px;
     position: absolute;
     cursor: pointer;
     content: url('asset/Arrow.png');
@@ -131,17 +131,17 @@ td {
 }
 
 .arrowup:active, .arrowup.active {
-    transform: translate(0, -5px);
+    transform: translate(0, -4px);
 }
 
 .arrowdown:active, .arrowdown.active {
-    transform: rotate(180deg) translate(0, -5px);
+    transform: rotate(180deg) translate(0, -4px);
 }
 
 .arrowleft:active, .arrowleft.active {
-    transform: rotate(-90deg) translate(0, -5px);
+    transform: rotate(-90deg) translate(0, -4px);
 }
 
 .arrowright:active, .arrowright.active {
-    transform: rotate(90deg) translate(0, -5px);
+    transform: rotate(90deg) translate(0, -4px);
 }
