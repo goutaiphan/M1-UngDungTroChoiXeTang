@@ -74,7 +74,7 @@ table {
     width: fit-content;
     position: relative;
     table-layout: fixed;
-    border: 2px solid gray;
+    border: 2px solid darkgray;
     border-radius: 3px;
     border-spacing: 0;
 }
