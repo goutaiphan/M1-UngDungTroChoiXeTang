@@ -86,9 +86,12 @@
     circle.id = 'circle';
     controlArea.appendChild(circle);
 
-    let backgroundSound = document.getElementById('backgroundSound');
-    backgroundSound.play();
-    backgroundSound.volume = 0.9;
+    function playBackgroundSound(){
+        let backgroundSound = document.getElementById('backgroundSound');
+        backgroundSound.play();
+        backgroundSound.volume = 0.9;
+    }
+    playBackgroundSound();
     let explosionSound = document.getElementById('explosionSound');
     explosionSound.playbackRate = 1.1;
     explosionSound.volume = 0.5;

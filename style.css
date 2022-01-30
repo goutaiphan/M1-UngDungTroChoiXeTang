@@ -5,7 +5,7 @@
 }
 
 #playArea {
-    width: fit-content;
+    width: max-content;
     margin: 70px auto 65px;
     position: relative;
 }
@@ -71,7 +71,7 @@
 }
 
 table {
-    width: fit-content;
+    width: max-content;
     position: relative;
     table-layout: fixed;
     border: 2px solid darkgray;
@@ -94,18 +94,19 @@ td:not(tr:last-child td) {
 }
 
 #controlArea {
-    width: fit-content;
+    width: 100%;
     margin: 140px auto auto auto;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 #circle {
     width: 71px;
     height: 71px;
     position: absolute;
+    margin: auto;
     background-image: url('asset/Circle.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -114,6 +115,7 @@ td:not(tr:last-child td) {
 .arrowup, .arrowdown, .arrowleft, .arrowright {
     width: 70px;
     height: 140px;
+    margin: auto;
     position: absolute;
     background-image: url('asset/Arrow.png');
     background-size: 70px;
@@ -123,22 +125,22 @@ td:not(tr:last-child td) {
     -webkit-tap-highlight-color: transparent;
 }
 
-.arrowup{
-    margin-top: -100px;
+.arrowup {
+    top: -100px;
 }
 
 .arrowdown {
-    margin-top: 100px;
+    bottom: -100px;
     transform: rotate(180deg);
 }
 
 .arrowleft {
-    margin-left: -100px;
+    left: -100px;
     transform: rotate(-90deg);
 }
 
 .arrowright {
-    margin-left: 100px;
+    left: 100px;
     transform: rotate(90deg);
 }
 
