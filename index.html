@@ -6,17 +6,18 @@
     <title>Xe tăng về thành</title>
     <link href="style.css" rel="stylesheet">
     <link href="baseStyle.css" rel="stylesheet">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="xetangvethanh.netlify.app" />
-    <meta property="og:title" content="Xe tăng về thành" />
-    <meta property="og:description" content="Thân mời bạn cùng tham gia trò chơi Xe tăng về thành." />
-    <meta property="og:image" content="asset/TriangleBackground.png" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="xetangvethanh.netlify.app"/>
+    <meta property="og:title" content="Xe tăng về thành"/>
+    <meta property="og:description" content="Thân mời bạn cùng tham gia trò chơi Xe tăng về thành."/>
+    <meta property="og:image" content="asset/TriangleBackground.png"/>
 </head>
 <body>
 <div id="titleArea">Xe tăng về thành</div>
 <div id="playArea"></div>
 <div id="controlArea"></div>
 <div id="audioArea">
+    <audio id="backgroundSound" src="asset/PureSummer.mp3" preload="auto"></audio>
     <audio id="explosionSound" src="asset/ExplosionSound.mp3" preload="auto"></audio>
     <audio id="victorySound" src="asset/VictorySound.mp3" preload="auto"></audio>
 </div>
@@ -85,6 +86,9 @@
     circle.id = 'circle';
     controlArea.appendChild(circle);
 
+    let backgroundSound = document.getElementById('backgroundSound');
+    backgroundSound.play();
+    backgroundSound.volume = 0.9;
     let explosionSound = document.getElementById('explosionSound');
     explosionSound.playbackRate = 1.1;
     explosionSound.volume = 0.5;
