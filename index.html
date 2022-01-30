@@ -86,14 +86,13 @@
     circle.id = 'circle';
     controlArea.appendChild(circle);
 
-    function playBackgroundSound(){
+    window.addEventListener("DOMContentLoaded", function () {
         let backgroundSound = document.getElementById('backgroundSound');
         backgroundSound.play();
         backgroundSound.volume = 0.9;
-    }
-    playBackgroundSound();
+    });
     let explosionSound = document.getElementById('explosionSound');
-    explosionSound.playbackRate = 1.1;
+    explosionSound.playbackRate = 1.2;
     explosionSound.volume = 0.5;
     let victorySound = document.getElementById('victorySound');
     victorySound.volume = 0.5;
