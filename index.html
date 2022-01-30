@@ -158,9 +158,10 @@
     }
 
     function moveControl(key) {
-        document.getElementsByClassName(key.toLowerCase())[0].classList.add('active');
+        let button = document.getElementsByClassName(key.toLowerCase())[0];
+        button.classList.add('active');
         setTimeout(function () {
-            document.getElementsByClassName(key.toLowerCase())[0].classList.remove('active');
+            button.classList.remove('active');
         }, 100);
     }
 
