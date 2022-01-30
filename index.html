@@ -154,15 +154,13 @@
             }
             tankPosition = [getPosition(tank.style.left), getPosition(tank.style.top)];
             result();
-        }
-    }
 
-    function moveControl(key) {
-        let button = document.getElementsByClassName(key.toLowerCase())[0];
-        button.classList.add('active');
-        setTimeout(function () {
-            button.classList.remove('active');
-        }, 100);
+            let control = document.getElementsByClassName(key.toLowerCase())[0];
+            control.classList.add('active');
+            setTimeout(function () {
+                control.classList.remove('active');
+            }, 100);
+        }
     }
 
     function getLocation(position) {
