@@ -73,7 +73,7 @@
     let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
     let controlArea = document.getElementById('controlArea');
     for (let i = 0; i < arrowName.length; i++) {
-        let arrow = document.createElement('img');
+        let arrow = document.createElement('div');
         arrow.className = arrowName[i].toLowerCase();
         arrow.onclick = function () {
             moveTank(arrowName[i]);
@@ -81,7 +81,7 @@
         controlArea.appendChild(arrow);
     }
 
-    let circle = document.createElement('img');
+    let circle = document.createElement('div');
     circle.id = 'circle';
     controlArea.appendChild(circle);
 

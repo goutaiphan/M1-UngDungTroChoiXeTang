@@ -89,32 +89,42 @@ td:not(td:last-child) {
     border-right: 1px solid darkgray;
 }
 
-td:not(tr:last-child td){
+td:not(tr:last-child td) {
     border-bottom: 1px solid darkgray;
 }
 
 #controlArea {
     width: fit-content;
-    margin: auto;
+    margin: 140px auto auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    left: -23px;
 }
 
 #circle {
     width: 71px;
     height: 71px;
     position: absolute;
-    margin: 39px 0 0 -11px;
-    content: url('asset/Circle.png');
+    background-image: url('asset/Circle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .arrowup, .arrowdown, .arrowleft, .arrowright {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 140px;
     position: absolute;
+    background-image: url('asset/Arrow.png');
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
-    content: url('asset/Arrow.png');
     -webkit-tap-highlight-color: transparent;
+}
+
+.arrowup{
+    margin-top: -100px;
 }
 
 .arrowdown {
@@ -123,12 +133,12 @@ td:not(tr:last-child td){
 }
 
 .arrowleft {
-    margin: 48px 0 0 -51px;
+    margin-left: -100px;
     transform: rotate(-90deg);
 }
 
 .arrowright {
-    margin: 48px 0 0 50px;
+    margin-left: 100px;
     transform: rotate(90deg);
 }
 
