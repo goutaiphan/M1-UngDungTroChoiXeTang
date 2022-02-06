@@ -1,3 +1,13 @@
+#explosion {
+    animation: fadeIn 0.8s linear;
+    animation-fill-mode: forwards;
+}
+
+#firework {
+    animation: fadeIn 1.1s linear;
+    animation-fill-mode: forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

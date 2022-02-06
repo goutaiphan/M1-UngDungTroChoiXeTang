@@ -1,25 +1,25 @@
 export {
     mapArea, tank, castle,
-    baseDistance, minLocation, maxLocation, tankPosition, bombPosition, castlePosition
+    baseDistance, minLocation, maxLocation,
+    tankPosition, bombPosition, castlePosition
 };
 import {getLocation, moveTank} from "./functionScript.js";
 
 let mapArea = document.getElementById('mapArea');
-
 let dimension = 5,
-    baseDistance = 66,
+    baseDistance = 65,
     minLocation = '2px',
     maxLocation = getLocation(dimension - 1);
 
 let table = document.createElement('table');
 mapArea.appendChild(table);
 for (let i = 0; i < dimension; i++) {
-    let tableRow = document.createElement('tr');
-    table.appendChild(tableRow);
+    let row = document.createElement('tr');
+    table.appendChild(row);
 
     for (let i = 0; i < dimension; i++) {
-        let tableCell = document.createElement('td');
-        tableRow.appendChild(tableCell)
+        let cell = document.createElement('td');
+        row.appendChild(cell)
     }
 }
 
@@ -65,11 +65,9 @@ circle.id = 'circle';
 controlArea.appendChild(circle);
 
 window.onkeydown = function (event) {
-    if (arrowName.includes(event.key)) {
-        moveTank(event.key);
-    } else {
-        event.preventDefault();
-    }
+    arrowName.includes(event.key)
+        ? moveTank(event.key)
+        : event.preventDefault();
 }
 
 // window.addEventListener("DOMContentLoaded", function () {

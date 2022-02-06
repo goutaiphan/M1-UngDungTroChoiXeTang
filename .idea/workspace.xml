@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbcabf14-34cc-4fe4-8a9e-49d1ab767812" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/stylesheet/controlStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stylesheet/mapStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascript/baseScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/baseScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javascript/functionScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/functionScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet/animationStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/animationStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet/baseStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/baseStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet/mapStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/mapStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,7 @@
       <workItem from="1643564923804" duration="4265000" />
       <workItem from="1643638851008" duration="1040000" />
       <workItem from="1643810710890" duration="400000" />
-      <workItem from="1644174030085" duration="2160000" />
+      <workItem from="1644174030085" duration="3146000" />
     </task>
     <servers />
   </component>
