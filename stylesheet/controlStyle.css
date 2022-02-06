@@ -1,7 +1,5 @@
 #controlArea {
     width: 100%;
-    margin: 140px auto auto;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,8 +1,3 @@
-#mapArea {
-    width: max-content;
-    margin: auto auto 65px;
-}
-
 #tank, #castle, #bomb, #explosion, #firework {
     width: 65px;
     height: 65px;

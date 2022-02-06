@@ -4,7 +4,17 @@
     }
 
     #titleArea {
+        margin: auto auto 60px;
         font-size: 32px;
+    }
+
+    #mapArea {
+        width: max-content;
+        margin: auto auto 110px;
+    }
+
+    #mapArea, #controlArea {
+        transform: scale(0.9);
     }
 }
 
@@ -15,7 +25,13 @@
     }
 
     #titleArea {
+        margin: auto auto 70px;
         font-size: 34px;
+    }
+
+    #mapArea {
+        width: max-content;
+        margin: auto auto 140px;
     }
 }
 
@@ -43,7 +59,6 @@ body {
 }
 
 #titleArea {
-    margin: auto auto 70px;
     font-family: 'PlayfairDisplay', serif;
     transform: scale(1.05, 1);
 }
