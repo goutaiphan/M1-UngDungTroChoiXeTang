@@ -1,6 +1,7 @@
 @media screen and (hover: none) and (pointer: coarse) {
     body {
         width: 95%;
+        margin: 80px auto 130px;
     }
 
     #titleArea {
@@ -22,6 +23,7 @@
 (hover: none) and (pointer: coarse) and (min-width: 500px) {
     body {
         width: 400px;
+        margin: 90px auto 140px;
     }
 
     #titleArea {
@@ -50,7 +52,6 @@
 }
 
 body {
-    margin: 100px auto 150px;
     text-align: center;
     background-image: url('../media/TriangleBackground.png');
     background-size: cover;
