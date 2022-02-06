@@ -1,6 +1,6 @@
 export {result, moveTank, getPosition, getLocation}
 import {
-    playArea, tank, castle,
+    mapArea, tank, castle,
     baseDistance, minLocation, maxLocation,
     tankPosition, bombPosition, castlePosition
 } from "./baseScript.js";
@@ -18,8 +18,8 @@ function result() {
             explosion.id = 'explosion';
             explosion.style.left = getLocation(tankPosition[0]);
             explosion.style.top = getLocation(tankPosition[1]);
-            playArea.removeChild(tank);
-            playArea.appendChild(explosion);
+            mapArea.removeChild(tank);
+            mapArea.appendChild(explosion);
             explosionSound.play();
         }
     }
@@ -29,15 +29,15 @@ function result() {
         firework.id = 'firework';
         firework.style.left = getLocation(tankPosition[0]);
         firework.style.top = getLocation(tankPosition[1]);
-        playArea.removeChild(tank);
-        playArea.removeChild(castle);
-        playArea.appendChild(firework);
+        mapArea.removeChild(tank);
+        mapArea.removeChild(castle);
+        mapArea.appendChild(firework);
         victorySound.play();
     }
 }
 
 function moveTank(key) {
-    if (playArea.contains(tank)) {
+    if (mapArea.contains(tank)) {
         let boundary, distance;
         if (key === 'ArrowUp' || key === 'ArrowLeft') {
             boundary = minLocation;

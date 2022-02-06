@@ -1,0 +1,66 @@
+#controlArea {
+    width: 100%;
+    margin: 140px auto auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+}
+
+#circle {
+    width: 71px;
+    height: 71px;
+    position: absolute;
+    margin: auto;
+    background-image: url('../media/Circle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.arrowup, .arrowdown, .arrowleft, .arrowright {
+    width: 70px;
+    height: 140px;
+    margin: auto;
+    position: absolute;
+    background-image: url('../media/Arrow.png');
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.arrowup {
+    top: -100px;
+}
+
+.arrowdown {
+    bottom: -100px;
+    transform: rotate(180deg);
+}
+
+.arrowleft {
+    left: -100px;
+    transform: rotate(-90deg);
+}
+
+.arrowright {
+    left: 100px;
+    transform: rotate(90deg);
+}
+
+.arrowup:active, .arrowup.active {
+    transform: translate(0, -5px);
+}
+
+.arrowdown:active, .arrowdown.active {
+    transform: rotate(180deg) translate(0, -5px);
+}
+
+.arrowleft:active, .arrowleft.active {
+    transform: rotate(-90deg) translate(0, -5px);
+}
+
+.arrowright:active, .arrowright.active {
+    transform: rotate(90deg) translate(0, -5px);
+}

@@ -1,10 +1,10 @@
 export {
-    playArea, tank, castle,
+    mapArea, tank, castle,
     baseDistance, minLocation, maxLocation, tankPosition, bombPosition, castlePosition
 };
 import {getLocation, moveTank} from "./functionScript.js";
 
-let playArea = document.getElementById('playArea');
+let mapArea = document.getElementById('mapArea');
 
 let dimension = 5,
     baseDistance = 66,
@@ -12,7 +12,7 @@ let dimension = 5,
     maxLocation = getLocation(dimension - 1);
 
 let table = document.createElement('table');
-playArea.appendChild(table);
+mapArea.appendChild(table);
 for (let i = 0; i < dimension; i++) {
     let tableRow = document.createElement('tr');
     table.appendChild(tableRow);
@@ -28,14 +28,14 @@ let tank = document.createElement('div');
 tank.id = 'tank';
 tank.style.top = getLocation(tankPosition[0]);
 tank.style.left = getLocation(tankPosition[1]);
-playArea.appendChild(tank);
+mapArea.appendChild(tank);
 
 let castlePosition = [dimension - 1, dimension - 1];
 let castle = document.createElement('div');
 castle.id = 'castle';
 castle.style.top = getLocation(castlePosition[0]);
 castle.style.left = getLocation(castlePosition[1]);
-playArea.appendChild(castle);
+mapArea.appendChild(castle);
 
 let bombArray = [];
 let bombPosition = [[0, 1], [1, 3], [3, 2], [4, 0], [3, 4]];
@@ -45,7 +45,7 @@ for (let i = 0; i < bombPosition.length; i++) {
     bomb.id = 'bomb';
     bomb.style.left = getLocation(bombPosition[i][0]);
     bomb.style.top = getLocation(bombPosition[i][1]);
-    playArea.appendChild(bomb);
+    mapArea.appendChild(bomb);
     bombArray.push(bomb);
 }
 

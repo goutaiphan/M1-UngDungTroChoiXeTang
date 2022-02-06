@@ -5,44 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbcabf14-34cc-4fe4-8a9e-49d1ab767812" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/font/PlayfairDisplay.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/font/TimesNewRoman.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascript/baseScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/javascript/functionScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Bomb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Castle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Circle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Explosion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/ExplosionSound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Firework.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/PureSummer.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/Tank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/TriangleBackground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/VictorySound.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stylesheet/animationStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stylesheet/controlStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stylesheet/mapStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Arrow.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Circle.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/ExplosionSound.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/PlayfairDisplay.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/PureSummer.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Tank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Tank.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/TimesNewRoman.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/TriangleBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/bomb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/castle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/explosion.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/firework.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/victorySound.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/baseStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/baseStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/fontStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/baseScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/baseScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/functionScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/functionScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet/baseStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/baseStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,10 +65,10 @@
       <recent name="$PROJECT_DIR$/asset" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/media" />
       <recent name="$PROJECT_DIR$/font" />
       <recent name="$PROJECT_DIR$/stylesheet" />
       <recent name="$PROJECT_DIR$/asset" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -159,7 +128,7 @@
       <workItem from="1643564923804" duration="4265000" />
       <workItem from="1643638851008" duration="1040000" />
       <workItem from="1643810710890" duration="400000" />
-      <workItem from="1644174030085" duration="1544000" />
+      <workItem from="1644174030085" duration="2160000" />
     </task>
     <servers />
   </component>
