@@ -5,13 +5,13 @@
     }
 
     #titleArea {
-        margin: auto auto 40px;
+        margin: auto auto 50px;
         font-size: 32px;
     }
 
     #mapArea {
         width: max-content;
-        margin: auto auto 110px;
+        margin: auto auto 120px;
     }
 
     #mapArea, #controlArea {
