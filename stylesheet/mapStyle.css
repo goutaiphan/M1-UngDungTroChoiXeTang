@@ -10,7 +10,6 @@
 }
 
 #tank {
-    transition: all 0.5s ease-out;
     background-image: url('../media/Tank.png');
     background-size: 55px 57px;
     background-position: 6px 7px;
