@@ -11,11 +11,10 @@
 #circle {
     width: 71px;
     height: 71px;
-    position: absolute;
     margin: auto;
+    position: absolute;
     background-image: url('../media/Circle.png');
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .arrowup, .arrowdown, .arrowleft, .arrowright {
@@ -25,7 +24,6 @@
     position: absolute;
     background-image: url('../media/Arrow.png');
     background-size: 70px;
-    background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 }

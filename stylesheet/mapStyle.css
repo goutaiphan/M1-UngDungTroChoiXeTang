@@ -13,21 +13,18 @@
     background-image: url('../media/Tank.png');
     background-size: 55px 57px;
     background-position: 6px 7px;
-    background-repeat: no-repeat;
 }
 
 #castle {
     background-image: url('../media/Castle.png');
     background-size: 58px;
     background-position: 5px 4px;
-    background-repeat: no-repeat;
 }
 
 #bomb {
     background-image: url('../media/Bomb.png');
     background-size: 45px;
     background-position: 9px 11px;
-    background-repeat: no-repeat;
     visibility: hidden;
 }
 
@@ -35,14 +32,12 @@
     background-image: url('../media/Explosion.png');
     background-size: 55px;
     background-position: 5px 7px;
-    background-repeat: no-repeat;
 }
 
 #firework {
     background-image: url('../media/Firework.png');
     background-size: 53px;
     background-position: 7px 7px;
-    background-repeat: no-repeat;
 }
 
 table {
