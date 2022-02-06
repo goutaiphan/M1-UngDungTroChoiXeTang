@@ -1,17 +1,23 @@
 export {result, moveTank, getPosition, getLocation}
 import {
-    mapArea, tank, castle,
     baseDistance, minLocation, maxLocation,
-    tankPosition, bombPosition, castlePosition
+    mapArea, tank, castle
 } from "./baseScript.js";
 
-function result() {
-    let explosionSound = document.getElementById('explosionSound');
-    explosionSound.playbackRate = 1.2;
-    explosionSound.volume = 0.5;
-    let victorySound = document.getElementById('victorySound');
-    victorySound.volume = 0.5;
+let tankPosition = localStorage.getItem('tankPosition');
+let castlePosition = localStorage.getItem('castlePosition');
+let bombPosition = localStorage.getItem('bombPosition');
+tankPosition = JSON.parse(tankPosition);
+castlePosition = JSON.parse(castlePosition);
+bombPosition = JSON.parse(bombPosition);
 
+let explosionSound = document.getElementById('explosionSound');
+explosionSound.playbackRate = 1.2;
+explosionSound.volume = 0.5;
+let victorySound = document.getElementById('victorySound');
+victorySound.volume = 0.5;
+
+function result() {
     for (let i = 0; i < bombPosition.length; i++) {
         if (String(tankPosition) === String(bombPosition[i])) {
             let explosion = document.createElement('div');
@@ -57,6 +63,7 @@ function moveTank(key) {
                 : parseInt(tank.style.left) + distance + 'px';
         }
         tankPosition = [getPosition(tank.style.left), getPosition(tank.style.top)];
+        localStorage.setItem('tankPosition', JSON.stringify(tankPosition))
         result();
 
         let control = document.getElementsByClassName(key.toLowerCase())[0];
