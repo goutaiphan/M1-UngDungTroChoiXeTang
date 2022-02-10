@@ -16,11 +16,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 }
 
-let siteWidth = 500;
-let scale = screen.width / siteWidth;
-
-document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=' + siteWidth + ', initial-scale=' + scale + '');
-
 let mapArea = document.getElementById('mapArea');
 let dimension = 5,
     baseDistance = 65,
