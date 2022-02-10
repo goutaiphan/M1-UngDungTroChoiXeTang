@@ -1,9 +1,6 @@
-html {
-    height: 90vh;
-}
-
 body {
     max-width: 500px;
+    height: 90vh;
 }
 
 * {
