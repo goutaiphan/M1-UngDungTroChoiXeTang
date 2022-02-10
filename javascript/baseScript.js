@@ -11,7 +11,7 @@ let widthRatio = window.innerWidth <= 500
     ? width / 500
     : 1.3;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //document.body.style.transform = `scale(${widthRatio})`;
+    document.body.style.transform = `scale(${widthRatio})`;
 } else {
 
 }
