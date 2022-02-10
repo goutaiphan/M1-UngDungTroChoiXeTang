@@ -11,6 +11,7 @@ body {
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
+    white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
 }
 
