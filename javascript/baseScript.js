@@ -8,12 +8,12 @@ let width = window.screen.availWidth < window.screen.availHeight
     ? window.screen.availWidth
     : window.screen.availHeight;
 let widthRatio = window.innerWidth <= 500
-    ? width / 500
+    ? width / 500 * 1.1
     : 1.3;
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.body.style.transform = `scale(${widthRatio})`;
 } else {
-    document.body.style.paddingTop = '50px';
+
 }
 
 let mapArea = document.getElementById('mapArea');
