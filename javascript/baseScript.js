@@ -12,7 +12,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     document.body.style.transform = `scale(${widthRatio})`;
     document.body.style.paddingTop = 20 * widthRatio + 'px';
 } else {
-    document.body.style.paddingTop = 20 * widthRatio + 'px';
+    document.body.style.paddingTop = 30 * widthRatio + 'px';
 }
 
 let mapArea = document.getElementById('mapArea');
