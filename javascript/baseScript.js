@@ -36,7 +36,7 @@ for (let i = 0; i < dimension; i++) {
 let tankPosition = [0, 0];
 localStorage.setItem('tankPosition', JSON.stringify(tankPosition));
 let tank = document.createElement('div');
-tank.className = 'mapArea tank';
+tank.className = 'mapZone tank';
 tank.style.top = getLocation(tankPosition[0]);
 tank.style.left = getLocation(tankPosition[1]);
 mapArea.appendChild(tank);
@@ -44,7 +44,7 @@ mapArea.appendChild(tank);
 let castlePosition = [dimension - 1, dimension - 1];
 localStorage.setItem('castlePosition', JSON.stringify(castlePosition));
 let castle = document.createElement('div');
-castle.className = 'mapArea castle';
+castle.className = 'mapZone castle';
 castle.style.top = getLocation(castlePosition[0]);
 castle.style.left = getLocation(castlePosition[1]);
 mapArea.appendChild(castle);
@@ -53,7 +53,7 @@ let bombPosition = [[0, 1], [1, 3], [3, 2], [4, 0], [3, 4]];
 localStorage.setItem('bombPosition', JSON.stringify(bombPosition));
 for (let i = 0; i < bombPosition.length; i++) {
     let bomb = document.createElement('div');
-    bomb.className = 'mapArea bomb';
+    bomb.className = 'mapZone bomb';
     bomb.style.left = getLocation(bombPosition[i][0]);
     bomb.style.top = getLocation(bombPosition[i][1]);
     mapArea.appendChild(bomb);
@@ -63,7 +63,7 @@ let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
 let controlArea = document.getElementById('controlArea');
 for (let i = 0; i < arrowName.length; i++) {
     let arrow = document.createElement('div');
-    arrow.className = 'controlArea ' + arrowName[i].toLowerCase();
+    arrow.className = 'controlZone ' + arrowName[i].toLowerCase();
     arrow.onclick = function () {
         moveTank(arrowName[i]);
     };

@@ -13,13 +13,15 @@ bombPosition = JSON.parse(bombPosition);
 
 let explosionAudio = document.getElementById('explosionAudio');
 explosionAudio.playbackRate = 1.2;
+explosionAudio.volume = 0.5;
 let victoryAudio = document.getElementById('victoryAudio');
+victoryAudio.volume = 0.5;
 
 function result() {
     for (let i = 0; i < bombPosition.length; i++) {
         if (String(tankPosition) === String(bombPosition[i])) {
             let explosion = document.createElement('div');
-            explosion.className = 'mapArea explosion';
+            explosion.className = 'mapZone explosion';
             explosion.style.left = getLocation(tankPosition[0]);
             explosion.style.top = getLocation(tankPosition[1]);
             mapArea.removeChild(tank);
@@ -30,7 +32,7 @@ function result() {
 
     if (String(tankPosition) === String(castlePosition)) {
         let firework = document.createElement('div');
-        firework.className = 'mapArea firework';
+        firework.className = 'mapZone firework';
         firework.style.left = getLocation(tankPosition[0]);
         firework.style.top = getLocation(tankPosition[1]);
         mapArea.removeChild(tank);

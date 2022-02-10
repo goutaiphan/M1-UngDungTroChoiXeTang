@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fbcabf14-34cc-4fe4-8a9e-49d1ab767812" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javascript/functionScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/functionScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet/animationStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet/baseStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/baseStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet/fontStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet/assetStyle.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +55,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -129,6 +134,7 @@
       <workItem from="1644458563415" duration="7524000" />
       <workItem from="1644466130506" duration="12707000" />
       <workItem from="1644478929341" duration="358000" />
+      <workItem from="1644505132344" duration="1996000" />
     </task>
     <servers />
   </component>

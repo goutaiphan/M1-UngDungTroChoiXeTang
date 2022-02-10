@@ -3,10 +3,10 @@
     box-sizing: border-box;
     border: none;
     outline: none;
+    white-space: nowrap;
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
-    white-space: nowrap;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -20,10 +20,6 @@ body {
     min-height: 100vh;
     text-align: center;
     margin: auto;
-}
-
-audio {
-    volume: 0.5;
 }
 
 #titleArea {
