@@ -57,8 +57,6 @@ body {
 }
 
 #titleArea {
-    width: 100%;
     font-family: 'PlayfairDisplay', serif;
-    transform: scale(1.05, 1);
     background-color: red;
 }
