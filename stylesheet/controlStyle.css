@@ -1,5 +1,6 @@
 #controlArea {
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 
@@ -26,37 +27,37 @@
     cursor: pointer;
 }
 
-.arrowup {
+.arrowUp {
     top: 50px;
 }
 
-.arrowdown {
+.arrowDown {
     bottom: 50px;
     transform: rotate(180deg);
 }
 
-.arrowleft {
+.arrowLeft {
     left: 60px;
     transform: rotate(-90deg);
 }
 
-.arrowright {
+.arrowRight {
     right: 60px;
     transform: rotate(90deg);
 }
 
-.arrowup:active, .arrowup.active {
+.arrowUp:active, .arrowUp.active {
     transform: translate(0, -5px);
 }
 
-.arrowdown:active, .arrowdown.active {
+.arrowDown:active, .arrowDown.active {
     transform: rotate(180deg) translate(0, -5px);
 }
 
-.arrowleft:active, .arrowleft.active {
+.arrowLeft:active, .arrowLeft.active {
     transform: rotate(-90deg) translate(0, -5px);
 }
 
-.arrowright:active, .arrowright.active {
+.arrowRight:active, .arrowRight.active {
     transform: rotate(90deg) translate(0, -5px);
 }

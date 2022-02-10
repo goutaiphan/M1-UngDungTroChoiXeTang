@@ -63,7 +63,7 @@ let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
 let controlArea = document.getElementById('controlArea');
 for (let i = 0; i < arrowName.length; i++) {
     let arrow = document.createElement('div');
-    arrow.className = 'controlZone ' + arrowName[i].toLowerCase();
+    arrow.className = 'controlZone ' + arrowName[i].replace('Arrow','arrow');
     arrow.onclick = function () {
         moveTank(arrowName[i]);
     };

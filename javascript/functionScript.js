@@ -66,7 +66,7 @@ function moveTank(key) {
         localStorage.setItem('tankPosition', JSON.stringify(tankPosition))
         result();
 
-        let control = document.getElementsByClassName(key.toLowerCase())[0];
+        let control = document.getElementsByClassName(key.replace('Arrow', 'arrow'))[0];
         control.classList.add('active');
         setTimeout(function () {
             control.classList.remove('active');
