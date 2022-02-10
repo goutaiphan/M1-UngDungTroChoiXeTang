@@ -10,7 +10,7 @@ let width = screen.width < screen.height
 let widthRatio = screen.width <= 500
     ? width / 500
     : 1.3;
-alert(screen.width);
+alert(screen.width + ' ' + screen.height);
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.body.style.transform = `scale(${widthRatio})`;
 } else {
