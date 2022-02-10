@@ -7,7 +7,7 @@ import {getLocation, moveTank} from "./functionScript.js";
 let width = screen.width < screen.height
     ? screen.width
     : screen.height;
-let widthRatio = screen.width <= 500
+let widthRatio = width <= 500
     ? width / 500
     : 1.3;
 alert(widthRatio);
