@@ -1,6 +1,6 @@
 body {
     max-width: 500px;
-    max-height: 100vh;
+    min-height: 100%;
 }
 
 * {
