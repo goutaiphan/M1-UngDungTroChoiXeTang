@@ -4,17 +4,15 @@ export {
 };
 import {getLocation, moveTank} from "./functionScript.js";
 
-let width = screen.width < screen.height
-    ? screen.width
-    : screen.height;
+let width = Math.min(screen.width, screen.height);
 let widthRatio = width <= 500
     ? width / 500 * 1.1
     : 1.3;
-
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     document.body.style.transform = `scale(${widthRatio})`;
+    document.body.style.paddingTop = 20 * widthRatio + 'px';
 } else {
-
+    document.body.style.paddingTop = 20 * widthRatio + 'px';
 }
 
 let mapArea = document.getElementById('mapArea');
