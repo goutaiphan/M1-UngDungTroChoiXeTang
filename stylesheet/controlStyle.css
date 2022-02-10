@@ -19,20 +19,21 @@
 .controlZone {
     width: 71px;
     height: 71px;
-    padding-top: 100px;
+    padding-top: 120px;
     position: absolute;
     background-image: url('../media/Arrow.png');
     background-size: 71px;
     background-position: center;
     cursor: pointer;
+    background-color: red;
 }
 
 .arrowUp {
-    top: 50px;
+    top: 40px;
 }
 
 .arrowDown {
-    bottom: 50px;
+    bottom: 40px;
     transform: rotate(180deg);
 }
 
