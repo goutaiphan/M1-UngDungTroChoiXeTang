@@ -13,9 +13,7 @@ bombPosition = JSON.parse(bombPosition);
 
 let explosionSound = document.getElementById('explosionSound');
 explosionSound.playbackRate = 1.2;
-explosionSound.volume = 0.5;
 let victorySound = document.getElementById('victorySound');
-victorySound.volume = 0.5;
 
 function result() {
     for (let i = 0; i < bombPosition.length; i++) {
