@@ -5,8 +5,8 @@
     outline: none;
     white-space: nowrap;
     background-color: transparent;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     -webkit-tap-highlight-color: transparent;
 }
 
