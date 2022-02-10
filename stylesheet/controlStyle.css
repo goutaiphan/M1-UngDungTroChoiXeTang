@@ -1,15 +1,15 @@
 #controlArea {
-    width: 100%;
+    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0.9;
+    flex-flow: row nowrap;
 }
 
 #circle {
     width: 71px;
     height: 71px;
-    margin: auto;
     position: absolute;
     background-image: url('../media/Circle.png');
     background-size: cover;
@@ -18,12 +18,12 @@
 .arrowup, .arrowdown, .arrowleft, .arrowright {
     width: 70px;
     height: 140px;
-    margin: auto;
     position: absolute;
     background-image: url('../media/Arrow.png');
     background-size: 70px;
     background-position: center;
     cursor: pointer;
+    background-color: red;
 }
 
 .arrowup {

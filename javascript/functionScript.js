@@ -21,7 +21,7 @@ function result() {
     for (let i = 0; i < bombPosition.length; i++) {
         if (String(tankPosition) === String(bombPosition[i])) {
             let explosion = document.createElement('div');
-            explosion.id = 'explosion';
+            explosion.className = 'mapArea explosion';
             explosion.style.left = getLocation(tankPosition[0]);
             explosion.style.top = getLocation(tankPosition[1]);
             mapArea.removeChild(tank);
@@ -32,7 +32,7 @@ function result() {
 
     if (String(tankPosition) === String(castlePosition)) {
         let firework = document.createElement('div');
-        firework.id = 'firework';
+        firework.className = 'mapArea firework';
         firework.style.left = getLocation(tankPosition[0]);
         firework.style.top = getLocation(tankPosition[1]);
         mapArea.removeChild(tank);
