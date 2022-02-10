@@ -1,47 +1,46 @@
 #controlArea {
-    width: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 300px;
+    height: 300px;
     opacity: 0.9;
-    flex-flow: row nowrap;
 }
 
-#circle {
+.circle {
     width: 71px;
     height: 71px;
     position: absolute;
     background-image: url('../media/Circle.png');
-    background-size: cover;
 }
 
-.arrowup, .arrowdown, .arrowleft, .arrowright {
-    width: 70px;
-    height: 140px;
+.controlArea {
+    width: 71px;
+    height: 142px;
     position: absolute;
     background-image: url('../media/Arrow.png');
     background-size: 70px;
     background-position: center;
     cursor: pointer;
-    background-color: red;
 }
 
 .arrowup {
-    top: -100px;
+    top: 30px;
 }
 
 .arrowdown {
-    bottom: -100px;
+    bottom: 30px;
     transform: rotate(180deg);
 }
 
 .arrowleft {
-    left: -100px;
+    left: 65px;
     transform: rotate(-90deg);
 }
 
 .arrowright {
-    left: 100px;
+    right: 65px;
     transform: rotate(90deg);
 }
 

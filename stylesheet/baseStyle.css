@@ -21,39 +21,40 @@
 @media screen and (hover: hover) and (pointer: fine),
 (hover: none) and (pointer: coarse) and (min-width: 500px) {
     body {
-        width: 400px;
-        margin: 90px auto 140px;
+        max-width: 500px;
+        min-height: 100vh;
+        padding: 50px 0 0px;
     }
 
     #titleArea {
-        margin: auto auto 70px;
+        margin-bottom: 70px;
         font-size: 34px;
     }
 
     #mapArea {
+        margin-bottom: 0px;
         width: max-content;
-        margin: auto auto 140px;
     }
 }
 
 * {
-    padding: 0;
-    margin: 0;
     position: relative;
     box-sizing: border-box;
     border: none;
     outline: none;
     background-color: transparent;
     background-repeat: no-repeat;
+    background-size: cover;
     -webkit-tap-highlight-color: transparent;
 }
 
 body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-image: url('../media/TriangleBackground.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    margin: auto;
 }
 
 audio {

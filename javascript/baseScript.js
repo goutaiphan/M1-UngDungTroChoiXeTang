@@ -4,6 +4,8 @@ export {
 };
 import {getLocation, moveTank} from "./functionScript.js";
 
+console.log(window.innerHeight, window.innerWidth);
+
 let mapArea = document.getElementById('mapArea');
 let dimension = 5,
     baseDistance = 65,
@@ -52,7 +54,7 @@ let arrowName = ['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'];
 let controlArea = document.getElementById('controlArea');
 for (let i = 0; i < arrowName.length; i++) {
     let arrow = document.createElement('div');
-    arrow.className = arrowName[i].toLowerCase();
+    arrow.className = 'controlArea ' + arrowName[i].toLowerCase();
     arrow.onclick = function () {
         moveTank(arrowName[i]);
     };
@@ -60,7 +62,7 @@ for (let i = 0; i < arrowName.length; i++) {
 }
 
 let circle = document.createElement('div');
-circle.id = 'circle';
+circle.className = 'circle';
 controlArea.appendChild(circle);
 
 window.onkeydown = function (event) {
