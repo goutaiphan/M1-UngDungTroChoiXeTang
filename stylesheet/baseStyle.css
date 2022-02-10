@@ -1,40 +1,6 @@
-@media screen and (hover: none) and (pointer: coarse) {
-    body {
-        margin: 75px auto 130px;
-    }
-
-    #titleArea {
-        margin: auto auto 50px;
-        font-size: 32px;
-    }
-
-    #mapArea {
-        width: max-content;
-        margin: auto auto 125px;
-    }
-
-    #mapArea, #controlArea {
-        transform: scale(0.9);
-    }
-}
-
-@media screen and (hover: hover) and (pointer: fine),
-(hover: none) and (pointer: coarse) and (min-width: 500px) {
-    body {
-        max-width: 500px;
-        min-height: 100vh;
-        padding: 50px 0 0px;
-    }
-
-    #titleArea {
-        margin-bottom: 70px;
-        font-size: 34px;
-    }
-
-    #mapArea {
-        margin-bottom: 0px;
-        width: max-content;
-    }
+body {
+    max-width: 500px;
+    height: 100vh;
 }
 
 * {
@@ -63,6 +29,8 @@ audio {
 
 #titleArea {
     width: 95%;
+    margin-bottom: 70px;
     font-family: 'PlayfairDisplay', serif;
+    font-size: 34px;
     transform: scale(1.05, 1);
 }

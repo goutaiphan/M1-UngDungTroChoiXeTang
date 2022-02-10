@@ -11,9 +11,9 @@ tankPosition = JSON.parse(tankPosition);
 castlePosition = JSON.parse(castlePosition);
 bombPosition = JSON.parse(bombPosition);
 
-let explosionSound = document.getElementById('explosionSound');
-explosionSound.playbackRate = 1.2;
-let victorySound = document.getElementById('victorySound');
+let explosionAudio = document.getElementById('explosionAudio');
+explosionAudio.playbackRate = 1.2;
+let victoryAudio = document.getElementById('victoryAudio');
 
 function result() {
     for (let i = 0; i < bombPosition.length; i++) {
@@ -24,7 +24,7 @@ function result() {
             explosion.style.top = getLocation(tankPosition[1]);
             mapArea.removeChild(tank);
             mapArea.appendChild(explosion);
-            explosionSound.play();
+            explosionAudio.play();
         }
     }
 
@@ -36,7 +36,7 @@ function result() {
         mapArea.removeChild(tank);
         mapArea.removeChild(castle);
         mapArea.appendChild(firework);
-        victorySound.play();
+        victoryAudio.play();
     }
 }
 
