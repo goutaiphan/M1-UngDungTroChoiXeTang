@@ -3,8 +3,8 @@
     justify-content: center;
     align-items: center;
 
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     opacity: 0.9;
 }
 
@@ -26,21 +26,21 @@
 }
 
 .arrowup {
-    top: 30px;
+    margin-top: -100px;
 }
 
 .arrowdown {
-    bottom: 30px;
+    margin-top: 100px;
     transform: rotate(180deg);
 }
 
 .arrowleft {
-    left: 65px;
+    margin-left: -110px;
     transform: rotate(-90deg);
 }
 
 .arrowright {
-    right: 65px;
+    margin-left: 110px;
     transform: rotate(90deg);
 }
 
