@@ -17,10 +17,10 @@ body {
     align-items: center;
 
     max-width: 500px;
-    min-height: 90vh;
+    min-height: 100vh;
     text-align: center;
     margin: auto;
-    padding-top: min(30px, 5%);
+    padding-top: 50px;
 }
 
 audio {
