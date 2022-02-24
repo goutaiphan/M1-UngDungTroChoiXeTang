@@ -79,9 +79,3 @@ window.onkeydown = function (event) {
         ? moveTank(event.key)
         : event.preventDefault();
 }
-
-// window.addEventListener("DOMContentLoaded", function () {
-//     let backgroundSound = document.getElementById('backgroundSound');
-//     backgroundSound.play();
-//     backgroundSound.volume = 0.9;
-// });
